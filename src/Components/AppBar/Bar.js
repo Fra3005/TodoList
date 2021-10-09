@@ -60,7 +60,7 @@ export default function SearchAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            TODO LIST
           </Typography>
           <Search>
             <SearchIconWrapper>
