@@ -36,6 +36,13 @@ export default function InsertItem() {
     setArray([...tmp]);
   };
 
+  const deleteTask = (e) => {
+    let tmp = array.findIndex((item) => item === e);
+    let array1 = [...array];
+    array1.splice(tmp, 1);
+    setArray([...array1]);
+  };
+
   useEffect(() => {
     console.log(array);
   }, [array]);
@@ -79,6 +86,9 @@ export default function InsertItem() {
               <Grid item sm={12}>
                 <List dense sx={{ boxShadow: 3 }}>
                   <ListItem
+                    onClick={() => {
+                      deleteTask(item);
+                    }}
                     secondaryAction={
                       <IconButton edge="end" aria-label="delete">
                         <DeleteIcon />
