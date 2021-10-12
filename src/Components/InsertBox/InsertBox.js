@@ -4,13 +4,13 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { Button, Container, Grid, Box } from "@mui/material";
-import ListTask from "../TaskList/List";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
+import SearchAppBar from "../AppBar/Bar";
 
 export default function InsertItem() {
   const [array, setArray] = useState([]);
@@ -48,6 +48,7 @@ export default function InsertItem() {
   }, [array]);
   return (
     <>
+      <SearchAppBar />
       <Container style={{ marginTop: "2vh" }}>
         <Grid container>
           <Grid item md={3}></Grid>
