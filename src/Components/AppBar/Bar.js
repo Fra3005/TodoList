@@ -11,7 +11,7 @@ import ToggleMode from "../../ToggleMode";
 export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "green" }}>
+      <AppBar position="static">
         <Toolbar>
           <Typography
             variant="h6"

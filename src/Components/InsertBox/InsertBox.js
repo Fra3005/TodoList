@@ -91,8 +91,8 @@ export default function InsertItem() {
                       deleteTask(item);
                     }}
                     secondaryAction={
-                      <IconButton edge="end" aria-label="delete">
-                        <DeleteIcon />
+                      <IconButton edge="end">
+                        <DeleteIcon sx={{ color: "red" }} />
                       </IconButton>
                     }
                   >
