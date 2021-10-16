@@ -13,7 +13,8 @@ import IconButton from "@mui/material/IconButton";
 import SearchAppBar from "../AppBar/Bar";
 
 export default function InsertItem() {
-  const [array, setArray] = useState([]);
+  const arr = JSON.parse(localStorage.getItem('todoItem')) || [];
+  const [array, setArray] = useState(arr);
   const [element, setElement] = useState("");
   const [flag, setFlag] = useState(true);
   const [errorElement, setErrorElement] = useState(false);
@@ -34,6 +35,8 @@ export default function InsertItem() {
       tmp.push(element);
     }
     setArray([...tmp]);
+
+    localStorage.setItem("todoItem", JSON.stringify(tmp))
   };
 
   const deleteTask = (e) => {
@@ -41,6 +44,8 @@ export default function InsertItem() {
     let array1 = [...array];
     array1.splice(tmp, 1);
     setArray([...array1]);
+    localStorage.setItem("todoItem", JSON.stringify(array1))
+    
   };
 
   useEffect(() => {

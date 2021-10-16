@@ -3,7 +3,7 @@ import React, { useState, useMemo } from "react";
 import InsertItem from "./Components/InsertBox/InsertBox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { SetThemeContextProvider } from "./contexts/SetThemeContext";
-import { deepOrange, red } from "@mui/material/colors";
+
 function App() {
   const [themeState, setThemeState] = useState("light");
 
@@ -20,7 +20,7 @@ function App() {
     palette: {
       mode: themeState,
     }
-  });
+  },[themeState]);
 
   return (
     <>

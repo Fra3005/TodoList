@@ -1,5 +1,4 @@
 import React from "react";
-import Switch from "@mui/material/Switch";
 import { useSetThemeContext } from "./contexts/SetThemeContext";
 import { useTheme } from "@mui/material/styles";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
