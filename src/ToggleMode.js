@@ -13,6 +13,8 @@ export default function ToggleMode() {
   const toggleColorMode = () => {
     if (theme.palette.mode === "dark") {
       setTheme("light");
+     
+      
     } else {
       setTheme("dark");
     }

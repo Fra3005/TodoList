@@ -87,11 +87,11 @@ export default function InsertItem() {
               <Grid item sm={12}>
                 <List dense sx={{ boxShadow: 3 }}>
                   <ListItem
-                    onClick={() => {
-                      deleteTask(item);
-                    }}
+                    
                     secondaryAction={
-                      <IconButton edge="end">
+                      <IconButton edge="end" onClick={() => {
+                      deleteTask(item);
+                    }}>
                         <DeleteIcon sx={{ color: "red" }} />
                       </IconButton>
                     }
